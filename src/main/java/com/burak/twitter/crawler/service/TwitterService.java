@@ -45,14 +45,6 @@ public class TwitterService {
                 .collect(Collectors.toList());
     }
 
-    private Paging getPaging(final int page) {
-        Paging paging = new Paging();
-        paging.setPage(page);
-        paging.setCount(pageSize);
-
-        return paging;
-    }
-
     private String getQueryText(String searchKey, String username) {
         return  "from:" + username + " " + searchKey;
     }
